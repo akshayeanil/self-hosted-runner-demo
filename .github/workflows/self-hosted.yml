@@ -12,4 +12,5 @@ jobs:
       - name: Display system info
         run: |
           echo "Running on:"
-          uname -a
+          systeminfo
+
