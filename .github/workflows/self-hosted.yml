@@ -1,4 +1,4 @@
-name: Self-Hosted Runner Test
+name: Self-Hosted Runner Test (Linux)
 
 on: [push]
 
@@ -9,8 +9,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Display system info
+      - name: Display Linux system info
         run: |
-          echo "Running on:"
-          systeminfo
-
+          echo "Running on Linux"
+          uname -a
+          lsb_release -a || cat /etc/os-release
+          df -h
+          free -m
