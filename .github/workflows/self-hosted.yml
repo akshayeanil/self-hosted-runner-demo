@@ -1,0 +1,15 @@
+name: Self-Hosted Runner Test
+
+on: [push]
+
+jobs:
+  test-runner:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Display system info
+        run: |
+          echo "Running on:"
+          uname -a
